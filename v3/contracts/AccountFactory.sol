@@ -16,3 +16,11 @@ contract AccountFactory {
     return accountOwn.owner();
   }
 }
+
+/**
+先执行后确实会生成UserAccount的一个实例。
+可以通过这个实例调用owner方法。
+
+new方法究竟有没有部署新的合约呢？
+为啥在ganache上看不到新部署的合约呢？
+ */
