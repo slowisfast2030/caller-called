@@ -4,10 +4,10 @@ pragma solidity ^0.5.16;
 import './UserAccount.sol';
 
 contract AccountFactory {
-  address[] public accounts;
+  address public accountOwner;
 
   function createAccount () public {
     address newAccount = address(new UserAccount (msg.sender));
-    accounts.push(newAccount);
+    accountOwner = newAccount;
   }
 }
