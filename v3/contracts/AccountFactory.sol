@@ -9,4 +9,8 @@ contract AccountFactory {
   function createAccount() public {
     accountOwn = new UserAccount(msg.sender);
   }
+
+  function getAccountOwner() public view returns (address) {
+    return accountOwn.owner();
+  }
 }
